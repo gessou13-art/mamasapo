@@ -1,0 +1,146 @@
+{
+  "categories": [
+    {
+      "id": "birth-prep",
+      "title": "出産準備",
+      "icon": "🏥",
+      "items": [
+        { "id": "bp-01", "text": "産院の場所・電話番号を確認", "priority": "high" },
+        { "id": "bp-02", "text": "陣痛タクシーの登録", "priority": "high" },
+        { "id": "bp-03", "text": "出産費用の目安確認・出産一時金の申請書類準備", "priority": "high" },
+        { "id": "bp-04", "text": "母子手帳の記入・持ち歩き", "priority": "high" },
+        { "id": "bp-05", "text": "産後サポート（実家・パートナー）の日程調整", "priority": "medium" },
+        { "id": "bp-06", "text": "産後の家事分担の相談", "priority": "medium" },
+        { "id": "bp-07", "text": "冷凍食材・レトルトのストック", "priority": "medium" },
+        { "id": "bp-08", "text": "チャイルドシートの取り付け確認", "priority": "high" }
+      ]
+    },
+    {
+      "id": "hospital-bag",
+      "title": "入院バッグ",
+      "icon": "👜",
+      "items": [
+        { "id": "hb-01", "text": "保険証・母子手帳・診察券", "priority": "high" },
+        { "id": "hb-02", "text": "入院申込書類（病院指定）", "priority": "high" },
+        { "id": "hb-03", "text": "前開きパジャマ（2〜3枚）", "priority": "high" },
+        { "id": "hb-04", "text": "産褥ショーツ（3〜5枚）", "priority": "high" },
+        { "id": "hb-05", "text": "授乳ブラ（2〜3枚）", "priority": "high" },
+        { "id": "hb-06", "text": "マタニティパッド（多め）", "priority": "high" },
+        { "id": "hb-07", "text": "洗面用具・ドライシャンプー", "priority": "medium" },
+        { "id": "hb-08", "text": "スマホ充電器・モバイルバッテリー", "priority": "high" },
+        { "id": "hb-09", "text": "飲み物・お菓子・ストロー", "priority": "medium" },
+        { "id": "hb-10", "text": "赤ちゃんの退院服（ロンパース等）", "priority": "high" },
+        { "id": "hb-11", "text": "円座クッション（会陰痛対策）", "priority": "medium" },
+        { "id": "hb-12", "text": "ノンカフェインのお茶・飲み物", "priority": "medium" }
+      ]
+    },
+    {
+      "id": "after-discharge",
+      "title": "退院後すぐ必要なもの",
+      "icon": "🏠",
+      "items": [
+        { "id": "ad-01", "text": "ベビーベッドまたは布団", "priority": "high" },
+        { "id": "ad-02", "text": "肌着（短肌着・長肌着 各5〜6枚）", "priority": "high" },
+        { "id": "ad-03", "text": "おむつ（新生児サイズ）1〜2袋", "priority": "high" },
+        { "id": "ad-04", "text": "おしりふき（無香料）", "priority": "high" },
+        { "id": "ad-05", "text": "チャイルドシート（退院時から必要）", "priority": "high" },
+        { "id": "ad-06", "text": "バウンサーまたはハイローチェア", "priority": "medium" },
+        { "id": "ad-07", "text": "おくるみ・スワドル", "priority": "medium" }
+      ]
+    },
+    {
+      "id": "newborn-care",
+      "title": "新生児お世話用品",
+      "icon": "👶",
+      "items": [
+        { "id": "nc-01", "text": "体温計（腋下または耳式）", "priority": "high" },
+        { "id": "nc-02", "text": "爪切り（赤ちゃん用）", "priority": "high" },
+        { "id": "nc-03", "text": "綿棒（赤ちゃん用）", "priority": "medium" },
+        { "id": "nc-04", "text": "鼻吸い器", "priority": "medium" },
+        { "id": "nc-05", "text": "ガーゼハンカチ（10枚以上）", "priority": "high" },
+        { "id": "nc-06", "text": "おくるみ・おくるみブランケット", "priority": "medium" },
+        { "id": "nc-07", "text": "ベビーモニターまたはカメラ", "priority": "low" }
+      ]
+    },
+    {
+      "id": "nursing",
+      "title": "授乳用品",
+      "icon": "🍼",
+      "items": [
+        { "id": "nu-01", "text": "授乳クッション", "priority": "high" },
+        { "id": "nu-02", "text": "搾乳機（手動または電動）", "priority": "medium", "tags": ["母乳向け"] },
+        { "id": "nu-03", "text": "母乳パッド（使い捨て）", "priority": "medium", "tags": ["母乳向け"] },
+        { "id": "nu-04", "text": "乳頭保護クリーム（ランシノー等）", "priority": "medium", "tags": ["母乳向け"] },
+        { "id": "nu-05", "text": "哺乳瓶（2〜3本）", "priority": "high", "tags": ["ミルク向け", "混合向け"] },
+        { "id": "nu-06", "text": "粉ミルク（0ヶ月〜）", "priority": "high", "tags": ["ミルク向け", "混合向け"] },
+        { "id": "nu-07", "text": "哺乳瓶消毒器（電子レンジ用等）", "priority": "high", "tags": ["ミルク向け", "混合向け"] },
+        { "id": "nu-08", "text": "ミルク用湯冷まし水・ウォーターサーバー検討", "priority": "medium", "tags": ["ミルク向け", "混合向け"] }
+      ]
+    },
+    {
+      "id": "bath",
+      "title": "お風呂用品",
+      "icon": "🛁",
+      "items": [
+        { "id": "ba-01", "text": "ベビーバス", "priority": "high" },
+        { "id": "ba-02", "text": "ベビーソープ・シャンプー", "priority": "high" },
+        { "id": "ba-03", "text": "沐浴布（2〜3枚）", "priority": "medium" },
+        { "id": "ba-04", "text": "赤ちゃん用保湿クリーム・ローション", "priority": "high" },
+        { "id": "ba-05", "text": "バスタオル（4〜5枚）", "priority": "medium" },
+        { "id": "ba-06", "text": "温度計（お風呂用）", "priority": "medium" }
+      ]
+    },
+    {
+      "id": "diaper",
+      "title": "おむつ用品",
+      "icon": "🧷",
+      "items": [
+        { "id": "di-01", "text": "おむつ替えシート（防水）", "priority": "high" },
+        { "id": "di-02", "text": "おむつ用ゴミ箱（消臭タイプ）", "priority": "medium" },
+        { "id": "di-03", "text": "おしりかぶれクリーム", "priority": "medium" },
+        { "id": "di-04", "text": "携帯おむつポーチ", "priority": "medium" }
+      ]
+    },
+    {
+      "id": "weaning-prep",
+      "title": "離乳食準備",
+      "icon": "🥣",
+      "items": [
+        { "id": "wp-01", "text": "離乳食調理セット（すりおろし器・こし器）", "priority": "high" },
+        { "id": "wp-02", "text": "離乳食用スプーン・食器セット", "priority": "high" },
+        { "id": "wp-03", "text": "ハイチェアまたはバウンサー（食事用）", "priority": "high" },
+        { "id": "wp-04", "text": "お食事エプロン（シリコン・布）", "priority": "medium" },
+        { "id": "wp-05", "text": "離乳食冷凍用製氷皿", "priority": "medium" },
+        { "id": "wp-06", "text": "離乳食の本（厚生労働省ガイドも参考に）", "priority": "low" }
+      ]
+    },
+    {
+      "id": "mama-care-items",
+      "title": "ママの産後ケア用品",
+      "icon": "💆",
+      "items": [
+        { "id": "mc-01", "text": "骨盤ベルト・骨盤ショーツ", "priority": "high" },
+        { "id": "mc-02", "text": "産後用ナプキン・マタニティパッド", "priority": "high" },
+        { "id": "mc-03", "text": "円座クッション（会陰痛対策）", "priority": "high" },
+        { "id": "mc-04", "text": "ノンカフェイン飲料・補給食", "priority": "medium" },
+        { "id": "mc-05", "text": "産後ガードル（1ヶ月健診後から）", "priority": "low" },
+        { "id": "mc-06", "text": "授乳しやすいパジャマ・ルームウェア", "priority": "medium" }
+      ]
+    },
+    {
+      "id": "family-tasks",
+      "title": "家族にお願いすること",
+      "icon": "👨‍👩‍👧",
+      "items": [
+        { "id": "ft-01", "text": "夜中の授乳交代・ミルク担当", "priority": "high" },
+        { "id": "ft-02", "text": "買い物・食事の準備", "priority": "high" },
+        { "id": "ft-03", "text": "掃除・洗濯", "priority": "medium" },
+        { "id": "ft-04", "text": "上の子の送迎・遊び相手", "priority": "medium" },
+        { "id": "ft-05", "text": "外出時の運転・同行", "priority": "medium" },
+        { "id": "ft-06", "text": "ゴミ出し", "priority": "low" },
+        { "id": "ft-07", "text": "ママが休めるように赤ちゃんの見守り", "priority": "high" },
+        { "id": "ft-08", "text": "沐浴・入浴のサポート", "priority": "medium" }
+      ]
+    }
+  ]
+}
