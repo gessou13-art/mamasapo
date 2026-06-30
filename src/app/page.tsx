@@ -157,6 +157,14 @@ export default function HomePage() {
                 </div>
               </Card>
             </Link>
+            <Link href="/events">
+              <Card color="beige">
+                <div className="text-center">
+                  <span className="text-3xl block mb-1">🎏</span>
+                  <p className="text-sm font-medium text-gray-700">赤ちゃんの行事</p>
+                </div>
+              </Card>
+            </Link>
           </div>
         </div>
 
