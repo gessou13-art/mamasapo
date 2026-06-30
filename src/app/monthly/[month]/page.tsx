@@ -12,7 +12,7 @@ import monthlyData from '@/data/monthly-guide.json'
 import qaData from '@/data/qa.json'
 import type { QAItem } from '@/types'
 
-const SECTION_TABS = ['発達', '授乳・食事', '睡眠', '遊び', 'ママ', '準備', '健診・接種'] as const
+const SECTION_TABS = ['発達', '授乳・食事', '睡眠', '遊び', 'おもちゃ', 'ママ', '準備', '健診・接種'] as const
 type SectionTab = typeof SECTION_TABS[number]
 
 export default function MonthlyPage() {
@@ -193,6 +193,29 @@ export default function MonthlyPage() {
               ))}
             </ul>
           </Card>
+        )}
+
+        {activeTab === 'おもちゃ' && (
+          <div className="space-y-3">
+            <div className="bg-pastel-beige rounded-2xl p-3 text-sm text-amber-800">
+              🧸 この時期の発達に合わせたおすすめのおもちゃです。個性によって興味は様々なので、お子さんの反応を見ながら選んでください。
+            </div>
+            {(data as typeof data & { toys?: { name: string; reason: string }[] }).toys?.map((toy, i) => (
+              <Card key={i} color="beige">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl flex-shrink-0">🎁</span>
+                  <div>
+                    <p className="font-bold text-gray-800 mb-1">{toy.name}</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{toy.reason}</p>
+                  </div>
+                </div>
+              </Card>
+            )) ?? (
+              <Card>
+                <p className="text-gray-500 text-center">おもちゃ情報を準備中です</p>
+              </Card>
+            )}
+          </div>
         )}
 
         {activeTab === 'ママ' && (
