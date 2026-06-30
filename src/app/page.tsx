@@ -163,22 +163,43 @@ export default function HomePage() {
         {/* Monthly Guide Browser */}
         <div>
           <h2 className="section-title mb-3">👶 月齢ガイドを探す</h2>
-          <div className="bg-white rounded-2xl p-4 shadow-sm">
-            <p className="text-xs text-gray-500 mb-3">月齢を選んで赤ちゃんの成長・気をつけることを確認できます</p>
-            <div className="grid grid-cols-4 gap-2">
-              {Array.from({ length: 13 }, (_, i) => (
-                <Link
-                  key={i}
-                  href={`/monthly/${i}`}
-                  className={`flex flex-col items-center justify-center py-2 rounded-xl text-sm font-bold transition-colors ${
-                    i === (ageInfo.ageInMonths ?? -1) && ageInfo.phase === 'postnatal'
-                      ? 'bg-pastel-pink-btn text-white'
-                      : 'bg-gray-50 text-gray-700 hover:bg-pastel-pink hover:text-pink-800'
-                  }`}
-                >
-                  <span>{i}ヶ月</span>
-                </Link>
-              ))}
+          <div className="bg-white rounded-2xl p-4 shadow-sm space-y-3">
+            <p className="text-xs text-gray-500">月齢を選んで成長の目安・気をつけることを確認できます</p>
+            <div>
+              <p className="text-xs font-medium text-gray-400 mb-2">0〜12ヶ月（1ヶ月ごと）</p>
+              <div className="grid grid-cols-4 gap-2">
+                {Array.from({ length: 13 }, (_, i) => (
+                  <Link
+                    key={i}
+                    href={`/monthly/${i}`}
+                    className={`flex items-center justify-center py-2 rounded-xl text-sm font-bold transition-colors ${
+                      i === (ageInfo.ageInMonths ?? -1) && ageInfo.phase === 'postnatal'
+                        ? 'bg-pastel-pink-btn text-white'
+                        : 'bg-gray-50 text-gray-700 hover:bg-pastel-pink hover:text-pink-800'
+                    }`}
+                  >
+                    {i}ヶ月
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="text-xs font-medium text-gray-400 mb-2">1歳〜3歳（3ヶ月ごと）</p>
+              <div className="grid grid-cols-4 gap-2">
+                {[15, 18, 21, 24, 27, 30, 33, 36].map((m) => (
+                  <Link
+                    key={m}
+                    href={`/monthly/${m}`}
+                    className={`flex items-center justify-center py-2 rounded-xl text-sm font-bold transition-colors ${
+                      m === (ageInfo.ageInMonths ?? -1) && ageInfo.phase === 'postnatal'
+                        ? 'bg-pastel-pink-btn text-white'
+                        : 'bg-gray-50 text-gray-700 hover:bg-pastel-pink hover:text-pink-800'
+                    }`}
+                  >
+                    {m}ヶ月
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>

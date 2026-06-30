@@ -17,7 +17,9 @@ type SectionTab = typeof SECTION_TABS[number]
 
 export default function MonthlyPage() {
   const params = useParams()
-  const month = Math.min(Math.max(parseInt(params.month as string) || 0, 0), 12)
+  const VALID_MONTHS = [0,1,2,3,4,5,6,7,8,9,10,11,12,15,18,21,24,27,30,33,36]
+  const parsedMonth = parseInt(params.month as string) || 0
+  const month = VALID_MONTHS.includes(parsedMonth) ? parsedMonth : 0
   const ageInfo = useBabyAge()
   const [activeTab, setActiveTab] = useState<SectionTab>('発達')
 
@@ -35,11 +37,11 @@ export default function MonthlyPage() {
       <PageHeader title={`${data.month}ヶ月ガイド`} backHref="/" />
 
       {/* Month Selector */}
-      <div className="bg-white border-b border-gray-100 py-3">
+      <div className="bg-white border-b border-gray-100 py-3 space-y-2">
         <div className="flex overflow-x-auto gap-2 px-4 scrollbar-hide">
           <Link
             href="/pregnancy"
-            className={`flex-shrink-0 px-3 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
+            className={`flex-shrink-0 px-3 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
               ageInfo.phase === 'pregnancy' ? 'bg-pastel-pink-btn text-white' : 'bg-gray-100 text-gray-600'
             }`}
           >
@@ -49,13 +51,28 @@ export default function MonthlyPage() {
             <Link
               key={i}
               href={`/monthly/${i}`}
-              className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
+              className={`flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
                 i === month ? 'bg-pastel-pink-btn text-white' :
                 i === currentMonth && ageInfo.phase === 'postnatal' ? 'bg-pastel-mint text-emerald-700 ring-2 ring-emerald-400' :
                 'bg-gray-100 text-gray-600'
               }`}
             >
               {i}
+            </Link>
+          ))}
+        </div>
+        <div className="flex overflow-x-auto gap-2 px-4 scrollbar-hide">
+          {[15, 18, 21, 24, 27, 30, 33, 36].map((m) => (
+            <Link
+              key={m}
+              href={`/monthly/${m}`}
+              className={`flex-shrink-0 px-3 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
+                m === month ? 'bg-pastel-pink-btn text-white' :
+                m === currentMonth && ageInfo.phase === 'postnatal' ? 'bg-pastel-mint text-emerald-700 ring-2 ring-emerald-400' :
+                'bg-gray-100 text-gray-600'
+              }`}
+            >
+              {m}ヶ月
             </Link>
           ))}
         </div>
