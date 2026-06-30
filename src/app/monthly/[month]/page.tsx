@@ -37,6 +37,14 @@ export default function MonthlyPage() {
       {/* Month Selector */}
       <div className="bg-white border-b border-gray-100 py-3">
         <div className="flex overflow-x-auto gap-2 px-4 scrollbar-hide">
+          <Link
+            href="/pregnancy"
+            className={`flex-shrink-0 px-3 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
+              ageInfo.phase === 'pregnancy' ? 'bg-pastel-pink-btn text-white' : 'bg-gray-100 text-gray-600'
+            }`}
+          >
+            出産前
+          </Link>
           {Array.from({ length: 13 }, (_, i) => (
             <Link
               key={i}

@@ -160,6 +160,29 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Monthly Guide Browser */}
+        <div>
+          <h2 className="section-title mb-3">👶 月齢ガイドを探す</h2>
+          <div className="bg-white rounded-2xl p-4 shadow-sm">
+            <p className="text-xs text-gray-500 mb-3">月齢を選んで赤ちゃんの成長・気をつけることを確認できます</p>
+            <div className="grid grid-cols-4 gap-2">
+              {Array.from({ length: 13 }, (_, i) => (
+                <Link
+                  key={i}
+                  href={`/monthly/${i}`}
+                  className={`flex flex-col items-center justify-center py-2 rounded-xl text-sm font-bold transition-colors ${
+                    i === (ageInfo.ageInMonths ?? -1) && ageInfo.phase === 'postnatal'
+                      ? 'bg-pastel-pink-btn text-white'
+                      : 'bg-gray-50 text-gray-700 hover:bg-pastel-pink hover:text-pink-800'
+                  }`}
+                >
+                  <span>{i}ヶ月</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Emergency Info */}
         <Card color="beige">
           <p className="text-xs text-gray-600 text-center leading-relaxed">
